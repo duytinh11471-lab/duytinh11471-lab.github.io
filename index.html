@@ -586,10 +586,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fallback)}else{fallback()}
     });
   });
-  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){
-    var svg=document.getElementById('windfarm-svg');
-    if(svg&&svg.pauseAnimations){svg.pauseAnimations()}
-  }
   var links=[].slice.call(document.querySelectorAll('.nav a'));
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){

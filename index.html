@@ -1,4 +1,8 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nguyễn Duy Tính · Địa chất</title>
 <meta name="description" content="Nguyễn Duy Tính – sinh viên Kỹ thuật Địa chất, Trường Đại học Dầu khí Việt Nam. Hồ sơ cá nhân, dự án khởi nghiệp, bài tập Địa Vật Lý Ứng Dụng và nghiên cứu.">
 <meta name="color-scheme" content="light">
@@ -136,6 +140,15 @@ sub{font-size:.7em}
 .deck-frame{position:relative;width:100%;max-width:100%;aspect-ratio:16/10;border-radius:var(--r-md);overflow:hidden;background:var(--white);box-shadow:0 12px 40px -18px rgba(0,0,0,.25)}
 .deck-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .deck-frame.doc{aspect-ratio:auto;height:min(85vh,960px)}
+.posted{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.posted svg{width:15px;height:15px;flex:none;color:var(--blue)}
+.deck-head .meta-date{margin-top:8px}
+.nav{min-width:0}
+.lang{display:inline-flex;flex:none;gap:2px;background:var(--gray);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;font:700 12px/1 var(--font);letter-spacing:.04em;padding:8px 11px;border-radius:999px;cursor:pointer;color:var(--muted)}
+.lang button:hover{color:var(--ink)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--white)}
+@media (max-width:820px){.top .wrap{gap:10px}.nav{flex:1 1 auto}}
 .asg{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:1024px){.asg{grid-template-columns:minmax(0,1fr)}}
 .deck-toc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px;font-size:14px;color:var(--muted)}
@@ -219,6 +232,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 }
 </style>
 
+</head>
+<body>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#about">Nguyễn Duy <span>Tính</span></a>
@@ -231,6 +246,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       <a href="#methodology" data-sec="methodology">Phương pháp</a>
       <a href="#contact" data-sec="contact">Liên hệ</a>
     </nav>
+    <div class="lang" role="group" aria-label="Ngôn ngữ / Language">
+      <button type="button" data-lang="vi" aria-pressed="true" title="Tiếng Việt">VI</button>
+      <button type="button" data-lang="en" aria-pressed="false" title="English">EN</button>
+    </div>
   </div>
 </header>
 
@@ -425,18 +444,21 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       <div class="asg">
         <article class="card">
           <span class="no">Bài tập 01 · Hạn nộp 01/10/2026</span>
+          <span class="posted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Đăng ngày 25/09/2026</span></span>
           <h3>Xây dựng website với sự hỗ trợ của AI</h3>
           <p>Tạo website cá nhân có sự hỗ trợ của AI. Sản phẩm chính là website này; cách làm được trình bày ở mục Phương pháp.</p>
           <div class="row"><span class="pill done">Đã nộp</span><a class="btn btn-dark btn-sm" href="#methodology">Xem thuyết minh</a></div>
         </article>
         <article class="card">
           <span class="no">Bài tập 02 · Bài thuyết trình 35 slide</span>
+          <span class="posted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Đăng ngày 30/09/2026</span></span>
           <h3>Tổng quan môn học Địa Vật Lý Ứng Dụng</h3>
           <p>Hệ thống hóa đề cương môn học: mục tiêu, cấu trúc 9 chương (I – IX), nguyên lý các phương pháp địa chấn, điện, từ, trọng lực, địa vật lý giếng khoan, chủ đề nâng cao AI/ML và Python, cùng phương pháp học tập và hệ thống đánh giá.</p>
           <div class="row"><span class="pill done">Hoàn thành</span><a class="btn btn-dark btn-sm" href="#bai-tap-02">Xem slide ngay</a></div>
         </article>
         <article class="card">
           <span class="no">Bài tập 03 · Địa chấn khúc xạ</span>
+          <span class="posted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Đăng ngày 01/10/2026</span></span>
           <h3>Phương pháp thời gian trễ (Delay-time method)</h3>
           <p>Xác định mặt ranh giới không lý tưởng giữa hai lớp đá: định nghĩa thời gian trễ, tách thời gian trễ bằng bắn thuận – nghịch, tính tốc độ ranh giới V<sub>2</sub>, đổi thời gian trễ ra độ sâu và ví dụ tính toán.</p>
           <div class="row"><span class="pill done">Hoàn thành</span><a class="btn btn-dark btn-sm" href="#bai-tap-03">Xem bài ngay</a></div>
@@ -449,6 +471,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
             <p class="eyebrow">Bài tập 02 · Xem trực tiếp</p>
             <h3>Tổng quan môn học Địa Vật Lý Ứng Dụng (APPGEO)</h3>
             <p>Sinh viên thực hiện: Nguyễn Duy Tính · Giảng viên: TS. Phạm Huy Giao</p>
+            <p class="meta-date"><span class="posted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Đăng ngày 30/09/2026</span></span></p>
           </div>
           <div class="deck-actions">
             <a class="btn btn-dark btn-sm" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fduytinh11471-lab.github.io%2FAPPGEO_-_Tong_quan_mon_hoc_Dia_Vat_Ly_Ung_Dung_bo_sung.pptx" target="_blank" rel="noopener">Mở toàn màn hình</a>
@@ -459,12 +482,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
           <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fduytinh11471-lab.github.io%2FAPPGEO_-_Tong_quan_mon_hoc_Dia_Vat_Ly_Ung_Dung_bo_sung.pptx" title="Bài thuyết trình Tổng quan môn học Địa Vật Lý Ứng Dụng" loading="lazy" allowfullscreen></iframe>
         </div>
         <ul class="deck-toc">
-          <li><b>Slide 1–5</b>Mục đích, phương pháp thực hiện, kết quả mong muốn</li>
-          <li><b>Slide 6–9</b>Thông tin chung, mục tiêu, mô tả và cấu trúc môn học</li>
-          <li><b>Slide 10–18</b>Chương I–III: Tổng quan, địa chấn, phương pháp điện</li>
-          <li><b>Slide 19–26</b>Chương IV–VIII: Từ, trọng lực, giếng khoan, kỹ thuật khác, lập dự án</li>
-          <li><b>Slide 27–29</b>Chương IX: Inversion, Python, AI/ML, vật lý đá, điện gió ngoài khơi</li>
-          <li><b>Slide 30–35</b>Phương pháp học, đánh giá, giáo trình và tài liệu tham khảo</li>
+          <li><b>Slide 1–5</b><span>Mục đích, phương pháp thực hiện, kết quả mong muốn</span></li>
+          <li><b>Slide 6–9</b><span>Thông tin chung, mục tiêu, mô tả và cấu trúc môn học</span></li>
+          <li><b>Slide 10–18</b><span>Chương I–III: Tổng quan, địa chấn, phương pháp điện</span></li>
+          <li><b>Slide 19–26</b><span>Chương IV–VIII: Từ, trọng lực, giếng khoan, kỹ thuật khác, lập dự án</span></li>
+          <li><b>Slide 27–29</b><span>Chương IX: Inversion, Python, AI/ML, vật lý đá, điện gió ngoài khơi</span></li>
+          <li><b>Slide 30–35</b><span>Phương pháp học, đánh giá, giáo trình và tài liệu tham khảo</span></li>
         </ul>
       </div>
 
@@ -474,6 +497,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
             <p class="eyebrow">Bài tập 03 · Xem trực tiếp</p>
             <h3>Phương pháp thời gian trễ – mặt ranh giới không lý tưởng</h3>
             <p>Sinh viên thực hiện: Nguyễn Duy Tính · Giảng viên: TS. Phạm Huy Giao</p>
+            <p class="meta-date"><span class="posted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Đăng ngày 01/10/2026</span></span></p>
           </div>
           <div class="deck-actions">
             <a class="btn btn-dark btn-sm" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fduytinh11471-lab.github.io%2FBai-tap-phuong-phap-thoi-gian-tre.docx" target="_blank" rel="noopener">Mở toàn màn hình</a>
@@ -484,11 +508,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
           <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fduytinh11471-lab.github.io%2FBai-tap-phuong-phap-thoi-gian-tre.docx" title="Bài tập Phương pháp thời gian trễ" loading="lazy" allowfullscreen></iframe>
         </div>
         <ul class="deck-toc">
-          <li><b>Mục 1–2</b>Vì sao cần phương pháp thời gian trễ; định nghĩa thời gian trễ δ</li>
-          <li><b>Mục 3–4</b>Phương trình thời gian truyền; tách δ bằng bắn thuận – nghịch (phương pháp t₀)</li>
-          <li><b>Mục 5</b>Xác định tốc độ ranh giới V₂ từ độ dốc 2/V₂</li>
+          <li><b>Mục 1–2</b><span>Vì sao cần phương pháp thời gian trễ; định nghĩa thời gian trễ δ</span></li>
+          <li><b>Mục 3–4</b><span>Phương trình thời gian truyền; tách δ bằng bắn thuận – nghịch (phương pháp t₀)</span></li>
+          <li><b>Mục 5</b><span>Xác định tốc độ ranh giới V₂ từ độ dốc 2/V₂</span></li>
           <li><b>Mục 6</b><span>Đổi thời gian trễ ra độ sâu z<sub>G</sub>, dựng mặt ranh giới</span></li>
-          <li><b>Mục 7</b>Giả thiết và hạn chế của phương pháp</li>
+          <li><b>Mục 7</b><span>Giả thiết và hạn chế của phương pháp</span></li>
           <li><b>Mục 8</b><span>Ví dụ tính toán: δ<sub>G</sub> = 10 ms, z<sub>G</sub> ≈ 5,2 m</span></li>
         </ul>
       </div>
@@ -647,16 +671,190 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 
 <script>
 (function(){
+  /* Bản dịch tiếng Anh: khóa là nội dung tiếng Việt của từng phần tử */
+  var EN={
+    "Giới thiệu":"About","Khởi nghiệp":"Startup","Kinh nghiệm":"Experience","Bài tập":"Assignments","Nghiên cứu":"Research","Phương pháp":"Methodology","Liên hệ":"Contact",
+    "Kỹ thuật Địa chất · Trường Đại học Dầu khí Việt Nam":"Geological Engineering · PetroVietnam University",
+    "Sinh viên Địa vật lý Dầu khí, khóa 2023–2027":"Petroleum Geophysics student, class of 2023–2027",
+    "Mình mong muốn trở thành kỹ sư địa chất dầu khí, làm việc trong lĩnh vực thăm dò và phân tích vỉa chứa. Mình đang tìm cơ hội thực tập trong ngành dầu khí, đồng thời quan tâm đến điện gió ngoài khơi và giải pháp giảm phát thải CO<sub>2</sub>.":"I aim to become a petroleum geologist working in exploration and reservoir analysis. I am looking for an internship in the oil and gas industry, and I am also interested in offshore wind and ways to cut CO<sub>2</sub> emissions.",
+    "Xem dự án khởi nghiệp":"View startup project",
+    "Kỹ thuật Địa chất / Địa vật lý Dầu khí":"Geological Engineering / Petroleum Geophysics","Chuyên ngành":"Major","Niên khóa":"Academic years",
+    "Vô địch PetroCup Đông Nam Á":"Champion, PetroCup Southeast Asia","Giải thưởng 2025":"2025 award","TP. Hồ Chí Minh":"Ho Chi Minh City","Nơi ở hiện tại":"Current location",
+    "Dự án khởi nghiệp":"Startup project",
+    "Gạch không nung từ mùn khoan, dưỡng hộ khoáng hóa CO<sub>2</sub>":"Unfired bricks from drill cuttings, cured by CO<sub>2</sub> mineralization",
+    "Biến chất thải khoan dầu khí thành vật liệu xây dựng carbon thấp.":"Turning oil and gas drilling waste into low-carbon building material.",
+    "Một viên gạch, hai bài toán môi trường":"One brick, two environmental problems",
+    "Mỗi giếng khoan dầu khí thải ra một lượng lớn mùn khoan cần được thu gom và xử lý. Trong khi đó, ngành vật liệu xây dựng tiêu tốn nhiều năng lượng và phát thải nhiều CO<sub>2</sub>.":"Every oil and gas well produces large volumes of drill cuttings that must be collected and treated. Meanwhile, the building materials industry uses a lot of energy and emits a lot of CO<sub>2</sub>.",
+    "Dự án dùng mùn khoan đã qua xử lý làm nguyên liệu cho gạch không nung, rồi dưỡng hộ gạch trong môi trường giàu CO<sub>2</sub>. Khí CO<sub>2</sub> phản ứng với các hợp chất canxi, tạo thành canxi cacbonat bền vững. Nhờ vậy CO<sub>2</sub> được lưu giữ lâu dài trong viên gạch và gạch cứng nhanh hơn.":"The project uses treated drill cuttings as raw material for unfired bricks, then cures the bricks in a CO<sub>2</sub>-rich environment. The CO<sub>2</sub> reacts with calcium compounds to form stable calcium carbonate, so the CO<sub>2</sub> stays locked in the brick and the brick hardens faster.",
+    "Phản ứng khoáng hóa":"Mineralization reaction",
+    "CO<sub>2</sub> được chuyển thành khoáng vật canxit ngay trong quá trình dưỡng hộ gạch.":"CO<sub>2</sub> is converted into the mineral calcite while the bricks cure.",
+    "Tận dụng chất thải":"Reuses waste",
+    "Biến mùn khoan từ ngành dầu khí thành nguyên liệu xây dựng, giảm lượng chất thải phải chôn lấp.":"Turns drill cuttings from the oil and gas industry into building material and reduces waste sent to landfill.",
+    "Lưu giữ CO<sub>2</sub>":"Stores CO<sub>2</sub>",
+    "CO<sub>2</sub> được khoáng hóa thành CaCO<sub>3</sub> và nằm lại lâu dài trong viên gạch.":"CO<sub>2</sub> is mineralized into CaCO<sub>3</sub> and stays in the brick for the long term.",
+    "Không nung":"No firing",
+    "Không đốt lò như gạch đất sét nung, nên tiết kiệm năng lượng và không dùng đất nông nghiệp.":"No kiln firing like clay bricks, so it saves energy and uses no farmland soil.",
+    "Quy trình sản xuất":"Production process",
+    "Xử lý mùn khoan":"Treat drill cuttings","Thu gom, tách dầu, sấy và nghiền":"Collect, remove oil, dry and grind",
+    "Phối trộn":"Mixing","Mùn khoan, chất kết dính và cốt liệu":"Cuttings, binder and aggregate",
+    "Ép tạo hình":"Pressing","Ép gạch theo khuôn":"Press bricks in molds",
+    "Dưỡng hộ CO<sub>2</sub>":"CO<sub>2</sub> curing","Trong buồng kín giàu CO<sub>2</sub>":"In a sealed CO<sub>2</sub>-rich chamber",
+    "Kiểm tra chất lượng":"Quality testing","Cường độ nén, độ hút nước theo TCVN 6477:2016 và độ an toàn môi trường":"Compressive strength and water absorption per TCVN 6477:2016, plus environmental safety",
+    "Thực địa, nghiên cứu và hoạt động":"Fieldwork, research and activities",
+    "Thực tập sinh địa chất thực địa":"Field Geologist Trainee",
+    "Khảo sát địa chất khu vực Nam Bộ và Nam Trung Bộ":"Regional geological field trip, South and South-Central Vietnam",
+    "Khảo sát các thành tạo địa chất tại Ninh Thuận, Bình Thuận, Khánh Hòa (Nha Trang) và TP. Hồ Chí Minh (bao gồm khu vực Vũng Tàu).":"Surveyed geological formations in Ninh Thuan, Binh Thuan, Khanh Hoa (Nha Trang) and Ho Chi Minh City (including the Vung Tau area).",
+    "Tìm hiểu đá xâm nhập magma ở Ninh Thuận, cồn cát ven biển ở Bình Thuận và các bồn trầm tích.":"Studied magmatic intrusions in Ninh Thuan, coastal sand dunes in Binh Thuan, and sedimentary basins.",
+    "Thực hành nhận dạng đá, lập bản đồ cấu trúc và liên kết địa tầng.":"Practised rock identification, structural mapping and stratigraphic correlation.",
+    "Hoàn thành báo cáo thực địa về lịch sử địa chất và tiến hóa kiến tạo khu vực.":"Wrote a field report on the regional geological history and tectonic evolution.",
+    "10/2025 – nay":"10/2025 – present","09/2023 – nay":"09/2023 – present",
+    "Sinh viên nghiên cứu":"Student Researcher","Chuỗi cung ứng điện gió ngoài khơi":"Offshore wind supply chain",
+    "Nghiên cứu hạ tầng chuỗi cung ứng điện gió ngoài khơi tại TP. Hồ Chí Minh (khu vực ven biển Vũng Tàu).":"Researching offshore wind supply chain infrastructure in Ho Chi Minh City (Vung Tau coastal area).",
+    "Phân tích nhu cầu hậu cần và năng lực cảng biển địa phương.":"Analysing logistics needs and local port capacity.",
+    "Đề xuất giải pháp tối ưu mạng lưới chuỗi cung ứng.":"Proposing ways to improve the supply chain network.",
+    "Thành viên tích cực":"Active Member",
+    "Tham gia hội thảo, seminar về địa chất và năng lượng tái tạo.":"Took part in workshops and seminars on geology and renewable energy.",
+    "Giao lưu với chuyên gia trong ngành.":"Networked with industry experts.",
+    "Hỗ trợ tổ chức các cuộc thi học thuật và sự kiện nói tiếng Anh.":"Helped organise academic competitions and English-speaking events.",
+    "Giải thưởng &amp; học bổng":"Awards &amp; scholarships",
+    "Cuộc thi học thuật dầu khí khu vực":"Regional petroleum academic competition",
+    "Học bổng Khuyến khích học tập":"Study Encouragement Scholarship","Trường Đại học Dầu khí Việt Nam":"PetroVietnam University",
+    "Kỹ năng":"Skills","Phần mềm":"Software","Thực địa":"Field","Khác":"Other",
+    "ArcGIS · bản đồ địa chất":"ArcGIS · geological mapping","AutoCAD · cơ bản":"AutoCAD · basic","IP · nhập môn":"IP · introductory",
+    "Lập bản đồ cấu trúc":"Structural mapping","Lấy mẫu trầm tích":"Sediment sampling","Phân tích vết lộ":"Outcrop analysis",
+    "Nghiên cứu &amp; phân tích":"Research &amp; analysis","Làm việc nhóm":"Teamwork","Bơi lội":"Swimming",
+    "Địa Vật Lý Ứng Dụng · HK 9–12/2026":"Applied Geophysics · Sep–Dec 2026 semester",
+    "Lời giải các bài tập môn Địa Vật Lý Ứng Dụng (Applied Geophysics) do TS. Phạm Huy Giao giảng dạy. Các bài mới sẽ được cập nhật tại đây.":"Solutions for the Applied Geophysics course taught by Dr. Pham Huy Giao. New assignments are added here as they are completed. The assignment files themselves are in Vietnamese.",
+    "Bài tập 01 · Hạn nộp 01/10/2026":"Assignment 01 · Due 01/10/2026",
+    "Xây dựng website với sự hỗ trợ của AI":"AI-assisted website making",
+    "Tạo website cá nhân có sự hỗ trợ của AI. Sản phẩm chính là website này; cách làm được trình bày ở mục Phương pháp.":"Build a personal website with AI help. The result is this website; the method is written up in the Methodology section.",
+    "Đã nộp":"Submitted","Hoàn thành":"Completed","Xem thuyết minh":"Read the write-up",
+    "Bài tập 02 · Bài thuyết trình 35 slide":"Assignment 02 · 35-slide presentation",
+    "Tổng quan môn học Địa Vật Lý Ứng Dụng":"Applied Geophysics course overview",
+    "Hệ thống hóa đề cương môn học: mục tiêu, cấu trúc 9 chương (I – IX), nguyên lý các phương pháp địa chấn, điện, từ, trọng lực, địa vật lý giếng khoan, chủ đề nâng cao AI/ML và Python, cùng phương pháp học tập và hệ thống đánh giá.":"A structured overview of the syllabus: objectives, the 9 chapters (I–IX), principles of seismic, electrical, magnetic, gravity and well-logging methods, advanced topics such as AI/ML and Python, plus study methods and grading.",
+    "Xem slide ngay":"View slides",
+    "Bài tập 03 · Địa chấn khúc xạ":"Assignment 03 · Seismic refraction",
+    "Phương pháp thời gian trễ (Delay-time method)":"The delay-time method",
+    "Xác định mặt ranh giới không lý tưởng giữa hai lớp đá: định nghĩa thời gian trễ, tách thời gian trễ bằng bắn thuận – nghịch, tính tốc độ ranh giới V<sub>2</sub>, đổi thời gian trễ ra độ sâu và ví dụ tính toán.":"Mapping an irregular boundary between two rock layers: defining delay time, separating delay times with forward and reverse shots, finding the refractor velocity V<sub>2</sub>, converting delay time to depth, and a worked example.",
+    "Xem bài ngay":"Read it now",
+    "Bài tập 02 · Xem trực tiếp":"Assignment 02 · View online (in Vietnamese)",
+    "Tổng quan môn học Địa Vật Lý Ứng Dụng (APPGEO)":"Applied Geophysics course overview (APPGEO)",
+    "Sinh viên thực hiện: Nguyễn Duy Tính · Giảng viên: TS. Phạm Huy Giao":"Student: Nguyễn Duy Tính · Lecturer: Dr. Pham Huy Giao",
+    "Mở toàn màn hình":"Open full screen","Tải file PowerPoint":"Download PowerPoint","Tải file Word":"Download Word file",
+    "Mục đích, phương pháp thực hiện, kết quả mong muốn":"Purpose, approach and expected outcomes",
+    "Thông tin chung, mục tiêu, mô tả và cấu trúc môn học":"Course information, objectives, description and structure",
+    "Chương I–III: Tổng quan, địa chấn, phương pháp điện":"Chapters I–III: Overview, seismic, electrical methods",
+    "Chương IV–VIII: Từ, trọng lực, giếng khoan, kỹ thuật khác, lập dự án":"Chapters IV–VIII: Magnetic, gravity, well logging, other techniques, project planning",
+    "Chương IX: Inversion, Python, AI/ML, vật lý đá, điện gió ngoài khơi":"Chapter IX: Inversion, Python, AI/ML, rock physics, offshore wind",
+    "Phương pháp học, đánh giá, giáo trình và tài liệu tham khảo":"Study methods, grading, textbooks and references",
+    "Bài tập 03 · Xem trực tiếp":"Assignment 03 · View online (in Vietnamese)",
+    "Phương pháp thời gian trễ – mặt ranh giới không lý tưởng":"The delay-time method for an irregular refractor",
+    "Mục 1–2":"Sections 1–2","Mục 3–4":"Sections 3–4","Mục 5":"Section 5","Mục 6":"Section 6","Mục 7":"Section 7","Mục 8":"Section 8",
+    "Vì sao cần phương pháp thời gian trễ; định nghĩa thời gian trễ δ":"Why the delay-time method is needed; defining delay time δ",
+    "Phương trình thời gian truyền; tách δ bằng bắn thuận – nghịch (phương pháp t₀)":"Travel-time equation; separating δ with forward and reverse shots (t₀ method)",
+    "Xác định tốc độ ranh giới V₂ từ độ dốc 2/V₂":"Finding refractor velocity V₂ from the 2/V₂ slope",
+    "Đổi thời gian trễ ra độ sâu z<sub>G</sub>, dựng mặt ranh giới":"Converting delay time to depth z<sub>G</sub> and drawing the refractor",
+    "Giả thiết và hạn chế của phương pháp":"Assumptions and limitations",
+    "Ví dụ tính toán: δ<sub>G</sub> = 10 ms, z<sub>G</sub> ≈ 5,2 m":"Worked example: δ<sub>G</sub> = 10 ms, z<sub>G</sub> ≈ 5.2 m",
+    "Đăng ngày 25/09/2026":"Posted 25 Sep 2026","Đăng ngày 30/09/2026":"Posted 30 Sep 2026","Đăng ngày 01/10/2026":"Posted 1 Oct 2026",
+    "Nghiên cứu · từ 10/2025":"Research · since 10/2025",
+    "Chuỗi cung ứng điện gió ngoài khơi tại TP. Hồ Chí Minh":"The offshore wind supply chain in Ho Chi Minh City",
+    "Tận dụng hạ tầng dầu khí cho điện gió":"Reusing oil and gas infrastructure for wind",
+    "Vùng biển phía Nam Việt Nam có tiềm năng điện gió ngoài khơi rất lớn. Khu vực Vũng Tàu, nay thuộc TP. Hồ Chí Minh, đã có sẵn hệ thống cảng, bãi chế tạo và dịch vụ hàng hải phục vụ ngành dầu khí. Đề tài tìm hiểu hạ tầng này có thể phục vụ phát triển điện gió ngoài khơi đến mức nào.":"Southern Vietnam's waters have large offshore wind potential. The Vung Tau area, now part of Ho Chi Minh City, already has ports, fabrication yards and marine services built for the oil and gas industry. This project asks how far that infrastructure can support offshore wind development.",
+    "Nghiên cứu xem xét nhu cầu hậu cần của một trang trại gió, như bốc xếp thiết bị siêu trường siêu trọng, diện tích cầu cảng, luồng tàu và bãi tập kết, rồi so sánh với khả năng đáp ứng hiện tại của các cảng địa phương.":"It looks at what a wind farm needs for logistics, such as handling oversized components, quay space, shipping channels and staging areas, and compares that with what local ports can offer today.",
+    "Những cảng và bãi chế tạo nào trong khu vực đã có thể tiếp nhận thiết bị tua-bin gió?":"Which ports and fabrication yards in the area can already handle wind turbine components?",
+    "Năng lực hậu cần còn thiếu hụt ở đâu?":"Where are the gaps in logistics capacity?",
+    "Cần thay đổi gì để mạng lưới chuỗi cung ứng địa phương hiệu quả hơn?":"What changes would make the local supply chain network more efficient?",
+    "Vai trò":"Role","Khu vực":"Area","Trọng tâm":"Focus","Tiến độ":"Status",
+    "TP. Hồ Chí Minh (ven biển Vũng Tàu)":"Ho Chi Minh City (Vung Tau coast)",
+    "Cảng biển, hậu cần, chuỗi cung ứng":"Ports, logistics, supply chain",
+    "Đang thực hiện, kết quả sẽ được cập nhật":"In progress, results will be posted here",
+    "Thuyết minh bài tập 01":"Assignment 01 write-up",
+    "Phương pháp xây dựng website":"How this website was built",
+    "Cách mình làm website này với sự hỗ trợ của AI, trình bày theo đúng 5 yêu cầu của đề bài.":"How I built this website with AI assistance, following the five tasks in the assignment brief.",
+    "Tìm hiểu cách làm website từ internet":"Learning how to make a website",
+    "Mình bắt đầu từ các nguồn học miễn phí để nắm các thành phần cơ bản của một trang web: HTML tạo cấu trúc, CSS trình bày bố cục và màu sắc, JavaScript xử lý các phần tương tác nhỏ.":"I started with free online sources to learn the building blocks of a web page: HTML for structure, CSS for layout and colour, and JavaScript for small interactive parts.",
+    "<a href=\"https://www.w3schools.com/html/\" target=\"_blank\" rel=\"noopener\">W3Schools: hướng dẫn HTML &amp; CSS</a>":"<a href=\"https://www.w3schools.com/html/\" target=\"_blank\" rel=\"noopener\">W3Schools: HTML &amp; CSS tutorials</a>",
+    "<a href=\"https://docs.github.com/en/pages\" target=\"_blank\" rel=\"noopener\">Tài liệu GitHub Pages</a> để đưa website lên mạng":"<a href=\"https://docs.github.com/en/pages\" target=\"_blank\" rel=\"noopener\">GitHub Pages documentation</a> for publishing the site",
+    "Lựa chọn công cụ":"Choosing the tool",
+    "Mình so sánh các công cụ tạo web kéo thả với cách tự viết code có AI hỗ trợ, và chọn viết HTML/CSS cùng trợ lý AI, lưu trữ trên GitHub Pages.":"I compared drag-and-drop website builders with writing the code myself with AI help, and chose hand-written HTML/CSS with an AI assistant, hosted on GitHub Pages.",
+    "Phương án":"Option","Chi phí":"Cost","Mức tùy biến giao diện":"Design control","Vai trò của AI":"Role of AI",
+    "Miễn phí":"Free","Thấp, mẫu cố định":"Low, fixed templates","Không có":"None",
+    "Miễn phí nhưng có quảng cáo, trả phí để gỡ":"Free with ads, paid to remove them","Trung bình":"Medium","Công cụ viết nội dung tích hợp":"Built-in writing tools",
+    "HTML/CSS + trợ lý AI (Claude) + GitHub Pages":"HTML/CSS + AI assistant (Claude) + GitHub Pages","Toàn quyền":"Full","Viết và giải thích code":"Writes and explains the code",
+    "Phương án này không tốn phí, có đường link gọn không quảng cáo, và giúp mình hiểu code thực sự hoạt động thế nào thay vì chỉ kéo thả.":"This option is free, gives a clean ad-free link, and helped me understand how the code works instead of only dragging blocks.",
+    "Phương pháp thực hiện":"Method",
+    "Mình dùng AI như một người cùng lập trình và kiểm tra lại kết quả ở từng bước:":"I used the AI as a pair programmer and checked its output at every step:",
+    "<b>Xác định yêu cầu.</b> Đưa đề bài cho AI và liệt kê các mục cần có trên trang.":"<b>Define requirements.</b> Gave the AI the assignment brief and listed the sections the site needed.",
+    "<b>Cung cấp nội dung thật.</b> Gửi CV, ảnh cá nhân và thông tin dự án để website mô tả đúng về bản thân.":"<b>Provide real content.</b> Supplied my CV, photo and project details so the site describes me accurately.",
+    "<b>Tạo bản nháp.</b> AI đề xuất thiết kế và viết code HTML, CSS.":"<b>Generate a draft.</b> The AI proposed a design and wrote the HTML and CSS.",
+    "<b>Rà soát và chỉnh sửa.</b> Đối chiếu thông tin với CV; yêu cầu AI chuyển sang tiếng Việt, bổ sung mục khởi nghiệp, cập nhật địa danh sau sáp nhập và thiết kế lại theo phong cách trang sản phẩm công nghệ.":"<b>Review and revise.</b> Checked every fact against my CV; asked the AI to switch to Vietnamese, add the startup section, update place names after the provincial merger, redesign in a tech product-page style, and add an English version.",
+    "<b>Kiểm thử.</b> Mở website trên máy tính và điện thoại.":"<b>Test.</b> Opened the site on a laptop and a phone.",
+    "<b>Đăng tải và cập nhật.</b> Đưa website lên GitHub Pages và bổ sung từng bài tập mới.":"<b>Publish and update.</b> Put the site on GitHub Pages and add each new assignment.",
+    "Thiết kế bố cục":"Layout design",
+    "Website là một trang cuộn duy nhất, lấy cảm hứng từ các trang giới thiệu sản phẩm công nghệ: nền trắng, chữ đậm cỡ lớn, các khối xám nhạt bo góc tròn, nút bo tròn và nhiều khoảng trắng. Thanh menu cố định phía trên giúp chuyển nhanh giữa các mục. Phần đầu trang có hình trang trại điện gió ngoài khơi với cánh quạt quay chậm, gắn với hướng nghiên cứu của mình.":"The site is a single scrolling page inspired by tech product pages: white background, large bold type, light grey rounded blocks, pill buttons and plenty of white space. A fixed menu at the top jumps between sections, with a Vietnamese/English switch. The header shows an offshore wind farm with slowly turning blades, linked to my research.",
+    "Thanh menu cố định":"Fixed menu bar",
+    "Giới thiệu · ảnh, mục tiêu, thông tin nổi bật":"About · photo, objective, key facts",
+    "Khởi nghiệp · gạch không nung từ mùn khoan":"Startup · unfired bricks from drill cuttings",
+    "Kinh nghiệm · thực địa, nghiên cứu, hoạt động, kỹ năng":"Experience · fieldwork, research, activities, skills",
+    "Bài tập · danh sách và trạng thái":"Assignments · list, status and posting dates",
+    "Nghiên cứu · tóm tắt đề tài":"Research · project summary",
+    "Phương pháp · phần thuyết minh này":"Methodology · this write-up",
+    "Liên hệ · điện thoại, email, địa chỉ":"Contact · phone, email, address",
+    "Triển khai":"Implementation",
+    "Toàn bộ website nằm trong một file <code>index.html</code>, đã gộp sẵn CSS, ảnh và hình minh họa, nên không cần máy chủ hay bước build. Font chữ Be Vietnam Pro lấy từ Google Fonts. Trang tự điều chỉnh theo màn hình máy tính, máy tính bảng và điện thoại.":"The whole site is one <code>index.html</code> file with the CSS, photo and illustration built in, so it needs no server or build step. The Be Vietnam Pro font comes from Google Fonts. The page adapts to desktop, tablet and phone screens.",
+    "duytinh11471-lab.github.io/ └── index.html ← nội dung, định dạng và ảnh trong một file":"duytinh11471-lab.github.io/\n└── index.html   ← content, styles and photo in one file",
+    "Cách đăng tải: tạo repository công khai tên <code>duytinh11471-lab.github.io</code> trên GitHub, tải lên file <code>index.html</code>, rồi bật <i>Settings → Pages → Deploy from a branch (main)</i>. Website có tại <a href=\"https://duytinh11471-lab.github.io\">duytinh11471-lab.github.io</a>.":"To publish: create a public GitHub repository named <code>duytinh11471-lab.github.io</code>, upload <code>index.html</code>, then turn on <i>Settings → Pages → Deploy from a branch (main)</i>. The site is at <a href=\"https://duytinh11471-lab.github.io\">duytinh11471-lab.github.io</a>.",
+    "Sẵn sàng cho cơ hội thực tập":"Open to internship opportunities",
+    "Rất vui được trao đổi về địa chất dầu khí, điện gió ngoài khơi và vật liệu carbon thấp.":"Happy to talk about petroleum geology, offshore wind and low-carbon materials.",
+    "Điện thoại":"Phone","Địa chỉ hiện tại":"Current address","TP. Hồ Chí Minh, Việt Nam":"Ho Chi Minh City, Vietnam",
+    "Sao chép số":"Copy number","Sao chép email":"Copy email","Mở LinkedIn":"Open LinkedIn",
+    "© 2026 Nguyễn Duy Tính · Trường Đại học Dầu khí Việt Nam":"© 2026 Nguyễn Duy Tính · PetroVietnam University",
+    "Xây dựng với sự hỗ trợ của AI · Bài tập 01 môn Địa Vật Lý Ứng Dụng":"Built with AI assistance · Applied Geophysics, Assignment 01",
+    "Đã sao chép":"Copied","Đã chọn, nhấn Ctrl+C":"Selected, press Ctrl+C"
+  };
+  var EN_ATTR={
+    "Ảnh chân dung Nguyễn Duy Tính":"Portrait of Nguyễn Duy Tính","Mục lục":"Sections","Sơ đồ bố cục trang":"Page layout sketch",
+    "Bài thuyết trình Tổng quan môn học Địa Vật Lý Ứng Dụng":"Presentation: Applied Geophysics course overview",
+    "Bài tập Phương pháp thời gian trễ":"Assignment: the delay-time method"
+  };
+  var TITLE={vi:document.title,en:"Nguyễn Duy Tính · Geoscience"};
+  var lang='vi', nodes=null, attrNodes=null;
+  function norm(s){return s.replace(/\s+/g,' ').trim()}
+  function tr(vi){return lang==='en'&&EN[vi]?EN[vi]:vi}
+  function collect(){
+    nodes=[];attrNodes=[];var hit=new Set();
+    document.querySelectorAll('body *').forEach(function(el){
+      if(el.closest('script,style,svg,.lang'))return;
+      for(var p=el.parentElement;p;p=p.parentElement){if(hit.has(p))return}
+      ['alt','title','aria-label'].forEach(function(a){var v=el.getAttribute(a);if(v&&EN_ATTR[v])attrNodes.push([el,a,v])});
+      var k=norm(el.innerHTML);
+      if(EN[k]){hit.add(el);nodes.push([el,el.innerHTML,EN[k]])}
+    });
+  }
+  function setLang(l){
+    if(!nodes)collect();
+    lang=l;
+    nodes.forEach(function(n){n[0].innerHTML=l==='en'?n[2]:n[1]});
+    attrNodes.forEach(function(n){n[0].setAttribute(n[1],l==='en'?EN_ATTR[n[2]]:n[2])});
+    document.documentElement.lang=l;document.title=TITLE[l];
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===l?'true':'false')});
+    try{localStorage.setItem('site-lang',l)}catch(e){}
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang)})});
+
   document.querySelectorAll('[data-copy]').forEach(function(btn){
     var label=btn.textContent;
     btn.addEventListener('click',function(){
       var el=document.getElementById(btn.dataset.copy);
       var text=btn.dataset.text||el.textContent;
-      var done=function(){btn.textContent='Đã sao chép';setTimeout(function(){btn.textContent=label},1600)};
-      var fallback=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Đã chọn, nhấn Ctrl+C'};
+      var done=function(){btn.textContent=tr('Đã sao chép');setTimeout(function(){btn.textContent=tr(label)},1600)};
+      var fallback=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent=tr('Đã chọn, nhấn Ctrl+C')};
       if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fallback)}else{fallback()}
     });
   });
+  var saved=null;try{saved=localStorage.getItem('site-lang')}catch(e){}
+  if(saved==='en')setLang('en');
   var links=[].slice.call(document.querySelectorAll('.nav a'));
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){
@@ -675,4 +873,5 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 })();
 </script>
 
-</body></html>
+</body>
+</html>

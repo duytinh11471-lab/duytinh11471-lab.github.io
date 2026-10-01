@@ -135,6 +135,9 @@ sub{font-size:.7em}
 .deck-actions{display:flex;flex-wrap:wrap;gap:10px}
 .deck-frame{position:relative;width:100%;max-width:100%;aspect-ratio:16/10;border-radius:var(--r-md);overflow:hidden;background:var(--white);box-shadow:0 12px 40px -18px rgba(0,0,0,.25)}
 .deck-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.deck-frame.doc{aspect-ratio:auto;height:min(85vh,960px)}
+.asg{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1024px){.asg{grid-template-columns:minmax(0,1fr)}}
 .deck-toc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px;font-size:14px;color:var(--muted)}
 .deck-toc li{display:flex;flex-direction:column;gap:2px}
 .deck-toc b{color:var(--ink);font-size:13px;font-variant-numeric:tabular-nums}
@@ -432,6 +435,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
           <p>Hệ thống hóa đề cương môn học: mục tiêu, cấu trúc 9 chương (I – IX), nguyên lý các phương pháp địa chấn, điện, từ, trọng lực, địa vật lý giếng khoan, chủ đề nâng cao AI/ML và Python, cùng phương pháp học tập và hệ thống đánh giá.</p>
           <div class="row"><span class="pill done">Hoàn thành</span><a class="btn btn-dark btn-sm" href="#bai-tap-02">Xem slide ngay</a></div>
         </article>
+        <article class="card">
+          <span class="no">Bài tập 03 · Địa chấn khúc xạ</span>
+          <h3>Phương pháp thời gian trễ (Delay-time method)</h3>
+          <p>Xác định mặt ranh giới không lý tưởng giữa hai lớp đá: định nghĩa thời gian trễ, tách thời gian trễ bằng bắn thuận – nghịch, tính tốc độ ranh giới V<sub>2</sub>, đổi thời gian trễ ra độ sâu và ví dụ tính toán.</p>
+          <div class="row"><span class="pill done">Hoàn thành</span><a class="btn btn-dark btn-sm" href="#bai-tap-03">Xem bài ngay</a></div>
+        </article>
       </div>
 
       <div class="card deck" id="bai-tap-02">
@@ -456,6 +465,31 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
           <li><b>Slide 19–26</b>Chương IV–VIII: Từ, trọng lực, giếng khoan, kỹ thuật khác, lập dự án</li>
           <li><b>Slide 27–29</b>Chương IX: Inversion, Python, AI/ML, vật lý đá, điện gió ngoài khơi</li>
           <li><b>Slide 30–35</b>Phương pháp học, đánh giá, giáo trình và tài liệu tham khảo</li>
+        </ul>
+      </div>
+
+      <div class="card deck" id="bai-tap-03">
+        <div class="deck-head">
+          <div>
+            <p class="eyebrow">Bài tập 03 · Xem trực tiếp</p>
+            <h3>Phương pháp thời gian trễ – mặt ranh giới không lý tưởng</h3>
+            <p>Sinh viên thực hiện: Nguyễn Duy Tính · Giảng viên: TS. Phạm Huy Giao</p>
+          </div>
+          <div class="deck-actions">
+            <a class="btn btn-dark btn-sm" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fduytinh11471-lab.github.io%2FBai-tap-phuong-phap-thoi-gian-tre.docx" target="_blank" rel="noopener">Mở toàn màn hình</a>
+            <a class="btn btn-line btn-sm" href="Bai-tap-phuong-phap-thoi-gian-tre.docx" download>Tải file Word</a>
+          </div>
+        </div>
+        <div class="deck-frame doc">
+          <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fduytinh11471-lab.github.io%2FBai-tap-phuong-phap-thoi-gian-tre.docx" title="Bài tập Phương pháp thời gian trễ" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <ul class="deck-toc">
+          <li><b>Mục 1–2</b>Vì sao cần phương pháp thời gian trễ; định nghĩa thời gian trễ δ</li>
+          <li><b>Mục 3–4</b>Phương trình thời gian truyền; tách δ bằng bắn thuận – nghịch (phương pháp t₀)</li>
+          <li><b>Mục 5</b>Xác định tốc độ ranh giới V₂ từ độ dốc 2/V₂</li>
+          <li><b>Mục 6</b><span>Đổi thời gian trễ ra độ sâu z<sub>G</sub>, dựng mặt ranh giới</span></li>
+          <li><b>Mục 7</b>Giả thiết và hạn chế của phương pháp</li>
+          <li><b>Mục 8</b><span>Ví dụ tính toán: δ<sub>G</sub> = 10 ms, z<sub>G</sub> ≈ 5,2 m</span></li>
         </ul>
       </div>
     </div>

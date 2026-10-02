@@ -143,6 +143,27 @@ sub{font-size:.7em}
 .posted{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
 .posted svg{width:15px;height:15px;flex:none;color:var(--blue)}
 .deck-head .meta-date{margin-top:8px}
+.cert-open{appearance:none;border:0;background:transparent;padding:0;margin:0;font:inherit;color:inherit;text-align:left;cursor:pointer;border-radius:12px}
+.cert-open:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.cert-open .see{display:inline-flex;align-items:center;gap:4px;margin-top:4px;font-size:13px;font-weight:700;color:var(--blue)}
+.cert-open .see::after{content:"→";transition:transform .2s}
+.cert-open:hover .see::after{transform:translateX(3px)}
+.cert-open:hover b{color:var(--blue)}
+.spec-btn{display:flex;flex-direction:column}
+.award-btn{display:flex;gap:16px;align-items:center;width:100%}
+.award-btn div{display:flex;flex-direction:column}
+dialog.cert{width:min(92vw,720px);max-height:92vh;padding:0;border:0;border-radius:var(--r-lg);background:var(--white);color:var(--text);box-shadow:0 30px 80px -20px rgba(0,0,0,.45);overflow:hidden}
+dialog.cert[open]{display:flex;flex-direction:column}
+dialog.cert::backdrop{background:rgba(10,18,32,.62)}
+.cert-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:20px 24px 14px;border-bottom:1px solid var(--gray-2)}
+.cert-head h3{font-size:20px;font-weight:800;margin-top:4px}
+.cert-x{flex:none;width:40px;height:40px;border-radius:50%;border:0;background:var(--gray);font-size:24px;line-height:1;cursor:pointer;color:var(--ink)}
+.cert-x:hover{background:var(--gray-2)}
+.cert-body{overflow:auto;background:var(--gray);padding:16px;min-height:0;flex:1 1 auto}
+.cert-body img{display:block;width:100%;height:auto;max-width:560px;margin:0 auto;border-radius:8px;box-shadow:0 8px 24px -10px rgba(0,0,0,.35)}
+.cert-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 20px;padding:14px 24px 18px;border-top:1px solid var(--gray-2)}
+.cert-foot p{font-size:13px;color:var(--muted);max-width:52ch}
+.cert-actions{display:flex;gap:10px}
 .nav{min-width:0}
 .lang{display:inline-flex;flex:none;gap:2px;background:var(--gray);border-radius:999px;padding:3px}
 .lang button{border:0;background:transparent;font:700 12px/1 var(--font);letter-spacing:.04em;padding:8px 11px;border-radius:999px;cursor:pointer;color:var(--muted)}
@@ -311,7 +332,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M16 5h3v2a3 3 0 0 1-3 3M8 5H5v2a3 3 0 0 0 3 3"/><path d="M12 13v4M8 21h8M9 17h6"/></svg>
-          <div><b>Vô địch PetroCup Đông Nam Á</b><span>Giải thưởng 2025</span></div>
+          <button type="button" class="cert-open spec-btn" aria-haspopup="dialog"><b>Vô địch PetroCup Đông Nam Á</b><span>Giải thưởng 2025</span><span class="see">Xem bằng chứng nhận</span></button>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
@@ -419,7 +440,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <div class="card">
           <h3>Giải thưởng &amp; học bổng</h3>
           <ul class="awards">
-            <li><span class="yr">2025</span><div><b>Vô địch PetroCup Đông Nam Á</b><span>Cuộc thi học thuật dầu khí khu vực</span></div></li>
+            <li><button type="button" class="cert-open award-btn" aria-haspopup="dialog"><span class="yr">2025</span><div><b>Vô địch PetroCup Đông Nam Á</b><span>Cuộc thi học thuật dầu khí khu vực</span><span class="see">Xem bằng chứng nhận</span></div></button></li>
             <li><span class="yr">2024</span><div><b>Học bổng Khuyến khích học tập</b><span>Trường Đại học Dầu khí Việt Nam</span></div></li>
           </ul>
         </div>
@@ -662,6 +683,26 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   </section>
 </main>
 
+<dialog class="cert" id="cert-dialog" aria-labelledby="cert-title">
+  <div class="cert-head">
+    <div>
+      <p class="eyebrow">Giải thưởng 2025</p>
+      <h3 id="cert-title">Bằng chứng nhận PetroCup 2025</h3>
+    </div>
+    <button type="button" class="cert-x" data-close aria-label="Đóng">×</button>
+  </div>
+  <div class="cert-body">
+    <img src="PetroCup-2025-Gold-Certificate.jpg" alt="Bằng Gold Certificate PetroCup World Student Olympics 2025 của đội Proterozoic, Trường Đại học Dầu khí Việt Nam" width="1200" height="1697" loading="lazy">
+  </div>
+  <div class="cert-foot">
+    <p>PetroCup World Student Olympics 2025 · South Asia League · Gold Certificate · Đội Proterozoic, Trường Đại học Dầu khí Việt Nam · 4–5/11/2025</p>
+    <div class="cert-actions">
+      <a class="btn btn-line btn-sm" href="PetroCup-2025-Gold-Certificate.pdf" target="_blank" rel="noopener">Mở bản PDF</a>
+      <button type="button" class="btn btn-dark btn-sm" data-close>Đóng</button>
+    </div>
+  </div>
+</dialog>
+
 <footer>
   <div class="wrap">
     <span>© 2026 Nguyễn Duy Tính · Trường Đại học Dầu khí Việt Nam</span>
@@ -811,13 +852,24 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
     "Sao chép số":"Copy number","Sao chép email":"Copy email","Mở LinkedIn":"Open LinkedIn",
     "© 2026 Nguyễn Duy Tính · Trường Đại học Dầu khí Việt Nam":"© 2026 Nguyễn Duy Tính · PetroVietnam University",
     "Xây dựng với sự hỗ trợ của AI · Bài tập 01 môn Địa Vật Lý Ứng Dụng":"Built with AI assistance · Applied Geophysics, Assignment 01",
-    "Đã sao chép":"Copied","Đã chọn, nhấn Ctrl+C":"Selected, press Ctrl+C"
+    "Đã sao chép":"Copied","Đã chọn, nhấn Ctrl+C":"Selected, press Ctrl+C",
+    "Xem bằng chứng nhận":"View certificate","Bằng chứng nhận PetroCup 2025":"PetroCup 2025 certificate",
+    "PetroCup World Student Olympics 2025 · South Asia League · Gold Certificate · Đội Proterozoic, Trường Đại học Dầu khí Việt Nam · 4–5/11/2025":"PetroCup World Student Olympics 2025 · South Asia League · Gold Certificate · Team Proterozoic, PetroVietnam University · 4–5 Nov 2025",
+    "Mở bản PDF":"Open PDF","Đóng":"Close"
   };
   var EN_ATTR={
     "Ảnh chân dung Nguyễn Duy Tính":"Portrait of Nguyễn Duy Tính","Mục lục":"Sections","Sơ đồ bố cục trang":"Page layout sketch",
     "Bài thuyết trình Tổng quan môn học Địa Vật Lý Ứng Dụng":"Presentation: Applied Geophysics course overview",
-    "Bài tập Phương pháp thời gian trễ":"Assignment: the delay-time method"
+    "Bài tập Phương pháp thời gian trễ":"Assignment: the delay-time method",
+    "Bằng Gold Certificate PetroCup World Student Olympics 2025 của đội Proterozoic, Trường Đại học Dầu khí Việt Nam":"PetroCup World Student Olympics 2025 Gold Certificate for team Proterozoic, PetroVietnam University",
+    "Đóng":"Close"
   };
+  var dlg=document.getElementById('cert-dialog');
+  function openCert(){ if(dlg.showModal){dlg.showModal()}else{dlg.setAttribute('open','')} }
+  function closeCert(){ if(dlg.close){dlg.close()}else{dlg.removeAttribute('open')} }
+  document.querySelectorAll('.cert-open').forEach(function(b){b.addEventListener('click',openCert)});
+  dlg.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',closeCert)});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)closeCert()});
   var TITLE={vi:document.title,en:"Nguyễn Duy Tính · Geoscience"};
   var lang='vi', nodes=null, attrNodes=null;
   function norm(s){return s.replace(/\s+/g,' ').trim()}
